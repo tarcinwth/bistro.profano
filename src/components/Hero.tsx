@@ -1,21 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import bistroPratos2 from "../imgs/prato2.jpg";
+import bistroPratos3 from "../imgs/prato3.jpg";
+import bistroPratos4 from "../imgs/prato4.jpg";
 
 const images = [
   {
-    url: 'https://images.unsplash.com/photo-1599458252573-56ae36120de1?auto=format&fit=crop&q=80',
-    alt: 'Moqueca baiana tradicional'
+    url: bistroPratos2,
+    alt: "Prato especial do Bistrô Profano",
   },
   {
-    url: 'https://images.unsplash.com/photo-1583273391124-6c1e2db2e1cd?auto=format&fit=crop&q=80',
-    alt: 'Acarajé da Bahia'
+    url: bistroPratos3,
+    alt: "Delícia da culinária baiana",
   },
   {
-    url: 'https://images.unsplash.com/photo-1584551882459-368d44396ee8?auto=format&fit=crop&q=80',
-    alt: 'Vista de Amargosa'
-  }
+    url: bistroPratos4,
+    alt: "Especialidade da casa",
+  },
 ];
 
 const Hero: React.FC = () => {
@@ -44,7 +47,7 @@ const Hero: React.FC = () => {
             src={image.url}
             alt={image.alt}
             className="w-full h-full object-cover"
-            loading={index === 0 ? 'eager' : 'lazy'}
+            loading={index === 0 ? "eager" : "lazy"}
           />
         </motion.div>
       ))}
@@ -96,4 +99,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero
+export default Hero;

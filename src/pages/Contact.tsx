@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import bistroPratos from '../imgs/prato1.jpg';
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -24,10 +25,11 @@ const Contact: React.FC = () => {
         {/* Hero Section */}
         <section className="relative h-[30vh] overflow-hidden mb-12">
           <img
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80"
+            src={bistroPratos}
             alt="Interior do Bistrô Profano"
             className="w-full h-full object-cover"
           />
+
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <h1 className="text-4xl md:text-5xl text-white font-bold">
               Contato
@@ -54,7 +56,7 @@ const Contact: React.FC = () => {
                 <div className="flex items-center space-x-4">
                   <MapPin className="w-6 h-6 text-laranja-bahia dark:text-laranja-claro" />
                   <p className="text-lg dark:text-white">
-                    Rua das Flores, 123 - Centro, Amargosa - BA
+                  Av. Jequitibá, 30 - Centro, Amargosa - BA.
                   </p>
                 </div>
 
@@ -73,8 +75,8 @@ const Contact: React.FC = () => {
                 <div className="flex items-center space-x-4">
                   <Clock className="w-6 h-6 text-laranja-bahia dark:text-laranja-claro" />
                   <div className="dark:text-white">
-                    <p className="text-lg">Terça a Domingo</p>
-                    <p className="text-lg">12h às 23h</p>
+                    <p className="text-lg">Sexta a Domingo</p>
+                    <p className="text-lg">20h às 00h</p>
                   </div>
                 </div>
               </div>

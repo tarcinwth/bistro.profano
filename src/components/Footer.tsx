@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-dende" />
-                <span>Rua das Flores, 123 - Centro, Amargosa - BA</span>
+                <span>Av. Jequitibá, 30 - Centro, Amargosa - BA.</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-dende" />
@@ -29,9 +29,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-display text-2xl mb-4">Horário</h3>
             <ul className="space-y-2">
-              <li>Segunda a Sexta: 11h às 23h</li>
-              <li>Sábado: 11h às 00h</li>
-              <li>Domingo: 11h às 22h</li>
+              <li>Sexta: 20h às 00h</li>
+              <li>Sábado: 20h às 00h</li>
+              <li>Domingo: 20h às 00h</li>
             </ul>
           </div>
 
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             <h3 className="font-display text-2xl mb-4">Redes Sociais</h3>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/bistroprofano/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-dende/10 hover:bg-dende/20 transition-colors duration-300"

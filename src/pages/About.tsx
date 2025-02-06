@@ -1,40 +1,43 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Award, Clock, MapPin, Users } from 'lucide-react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Award, Clock, MapPin, Users } from "lucide-react";
+import bistroLogo from "../imgs/logo.png";
+import bistroPratos from "../imgs/prato1.jpg";
 
 const timelineEvents = [
   {
     year: 2010,
-    title: 'Fundação do Bistrô',
-    description: 'Inauguração do Bistrô Profano no coração de Amargosa.',
-    icon: MapPin
+    title: "Fundação do Bistrô",
+    description: "Inauguração do Bistrô Profano no coração de Amargosa.",
+    icon: MapPin,
   },
   {
     year: 2015,
-    title: 'Prêmio Sabor da Bahia',
-    description: 'Reconhecimento como melhor restaurante baiano do Recôncavo.',
-    icon: Award
+    title: "Prêmio Sabor da Bahia",
+    description: "Reconhecimento como melhor restaurante baiano do Recôncavo.",
+    icon: Award,
   },
   {
     year: 2018,
-    title: 'Expansão',
-    description: 'Ampliação do espaço e introdução do cardápio de doces típicos.',
-    icon: Users
+    title: "Expansão",
+    description:
+      "Ampliação do espaço e introdução do cardápio de doces típicos.",
+    icon: Users,
   },
   {
     year: 2023,
-    title: 'Certificação de Excelência',
-    description: 'Certificação de qualidade em gastronomia tradicional baiana.',
-    icon: Clock
-  }
+    title: "Certificação de Excelência",
+    description: "Certificação de qualidade em gastronomia tradicional baiana.",
+    icon: Clock,
+  },
 ];
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   return (
@@ -51,7 +54,7 @@ const About: React.FC = () => {
         {/* Hero Section */}
         <section className="relative h-[40vh] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80"
+            src={bistroPratos}
             alt="Interior do Bistrô Profano"
             className="w-full h-full object-cover"
           />
@@ -76,10 +79,11 @@ const About: React.FC = () => {
                 Um Pedaço da Bahia em Amargosa
               </h2>
               <p className="text-gray-700 dark:text-gray-300">
-                O Bistrô Profano nasceu do sonho de trazer os sabores autênticos da culinária
-                baiana para o coração do Recôncavo. Fundado em 2010 por Dona Maria e Chef João,
-                nosso restaurante se tornou um ponto de encontro para aqueles que buscam não
-                apenas uma refeição, mas uma experiência cultural completa.
+                O Bistrô Profano nasceu do sonho de trazer os sabores autênticos
+                da culinária baiana para o coração do Recôncavo. Fundado em 2010
+                por Dona Maria e Chef João, nosso restaurante se tornou um ponto
+                de encontro para aqueles que buscam não apenas uma refeição, mas
+                uma experiência cultural completa.
               </p>
             </motion.div>
           </div>
@@ -100,7 +104,7 @@ const About: React.FC = () => {
                 className="bg-white dark:bg-marrom-escuro rounded-lg overflow-hidden shadow-lg"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80"
+                  src={bistroLogo}
                   alt="Chef Maria"
                   className="w-full h-64 object-cover"
                 />
@@ -109,8 +113,9 @@ const About: React.FC = () => {
                     Dona Maria
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Com mais de 30 anos de experiência na culinária baiana, Dona Maria
-                    traz consigo receitas passadas por gerações em sua família.
+                    Com mais de 30 anos de experiência na culinária baiana, Dona
+                    Maria traz consigo receitas passadas por gerações em sua
+                    família.
                   </p>
                 </div>
               </motion.div>
@@ -123,7 +128,7 @@ const About: React.FC = () => {
                 className="bg-white dark:bg-marrom-escuro rounded-lg overflow-hidden shadow-lg"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&q=80"
+                  src={bistroLogo}
                   alt="Chef João"
                   className="w-full h-64 object-cover"
                 />
@@ -132,8 +137,9 @@ const About: React.FC = () => {
                     Chef João
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Formado em gastronomia e especializado em fusão contemporânea,
-                    João traz um toque moderno aos pratos tradicionais.
+                    Formado em gastronomia e especializado em fusão
+                    contemporânea, João traz um toque moderno aos pratos
+                    tradicionais.
                   </p>
                 </div>
               </motion.div>
@@ -161,12 +167,12 @@ const About: React.FC = () => {
                   {index !== timelineEvents.length - 1 && (
                     <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-gradient-to-b from-dende to-laranja-queimado" />
                   )}
-                  
+
                   {/* Icon */}
                   <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-dende to-laranja-queimado flex items-center justify-center shadow-lg">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  
+
                   {/* Content */}
                   <div>
                     <div className="flex items-center gap-4 mb-2">
